@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<Anfragen>
+    <Anfrage>
+        <id>1</id>
+        <datumS>2.03.2022 </datumS>
+        <bezeichnung>21</bezeichnung>
+        <gewerk>Dims</gewerk>
+        <firma>EE</firma>
+        <land>FFF</land>
+        <deadline>d-line</deadline>
+        <summe>2034.00</summe>
+        <kennzahl>1</kennzahl>
+        <angNummer>An78-2022</angNummer>
+        <beschreibung>neue Beschreibung des Angebotes</beschreibung>
+        <arbeitszeit>200</arbeitszeit>
+        <komments>
+           Komment für heute
+        </komments>
+    </Anfrage>
+    <Anfrage>
+        <id>2</id>
+        <datumS>2.03.2022 </datumS>
+        <bezeichnung>Erk-Bohrungen-Illwerke</bezeichnung>
+        <gewerk>Bohrung</gewerk>
+        <firma>Illwerke</firma>
+        <land>Oesterreich</land>
+        <deadline>01.05.2022</deadline>
+        <summe>20000034.00</summe>
+        <kennzahl>5</kennzahl>
+        <angNummer>An99-2022</angNummer>
+        <beschreibung>6 Bohrloecher</beschreibung>
+        <arbeitszeit>209</arbeitszeit>
+        <komments>
+            Komment für heute
+        </komments>
+    </Anfrage>
+    <Anfrage>
+        <id>3</id>
+        <datumS>22.03.2022 </datumS>
+        <bezeichnung>Nurkasgan (KZ)</bezeichnung>
+        <gewerk>Schacht</gewerk>
+        <firma>Dings_Metall</firma>
+        <land>KZ</land>
+        <deadline>d-line</deadline>
+        <summe>200034.00</summe>
+        <kennzahl>2</kennzahl>
+        <angNummer>An78-2022</angNummer>
+        <beschreibung>neue Beschreibung des Angebotes</beschreibung>
+        <arbeitszeit>200</arbeitszeit>
+        <komments>
+            Komment für heute
+        </komments>
+    </Anfrage>
+    <Anfrage>
+        <id>3</id>
+        <datumS>2.03.2022 </datumS>
+        <bezeichnung>SKRU-2</bezeichnung>
+        <gewerk>Bohrung</gewerk>
+        <firma>Illwerke</firma>
+        <land>Oesterreich</land>
+        <deadline>01.05.2022</deadline>
+        <summe>20000034.00</summe>
+        <kennzahl>3</kennzahl>
+        <angNummer>An99-2022</angNummer>
+        <beschreibung>6 Bohrloecher</beschreibung>
+        <arbeitszeit>209</arbeitszeit>
+        <komments>
+            Komment für heute
+        </komments>
+    </Anfrage>
+    <Anfrage>
+        <id>4</id>
+        <datumS>2.03.2022 </datumS>
+        <bezeichnung>Erk-Schottland</bezeichnung>
+        <gewerk>Bohrung</gewerk>
+        <firma>Illwerke</firma>
+        <land>Oesterreich</land>
+        <deadline>01.05.2022</deadline>
+        <summe>20000034.00</summe>
+        <kennzahl>4</kennzahl>
+        <angNummer>An99-2022</angNummer>
+        <beschreibung>6 Bohrloecher</beschreibung>
+        <arbeitszeit>209</arbeitszeit>
+        <komments>
+            Komment für heute
+        </komments>
+    </Anfrage>
+    <Anfrage>
+    <id>4</id>
+    <datumS>2.03.2022 </datumS>
+    <bezeichnung>Erk-Schottland</bezeichnung>
+    <gewerk>Bohrung</gewerk>
+    <firma>Illwerke</firma>
+    <land>Oesterreich</land>
+    <deadline>01.05.2022</deadline>
+    <summe>20000034.00</summe>
+    <kennzahl>3</kennzahl>
+    <angNummer>An99-2022</angNummer>
+    <beschreibung>6 Bohrloecher</beschreibung>
+    <arbeitszeit>209</arbeitszeit>
+    <komments>
+        Komment für heute
+    </komments>
+</Anfrage>
+    <Anfrage>
+        <id>4</id>
+        <datumS>2.03.2022 </datumS>
+        <bezeichnung>Erk-Schottland</bezeichnung>
+        <gewerk>Bohrung</gewerk>
+        <firma>Illwerke</firma>
+        <land>Oesterreich</land>
+        <deadline>01.05.2022</deadline>
+        <summe>20000034.00</summe>
+        <kennzahl>1</kennzahl>
+        <angNummer>An99-2022</angNummer>
+        <beschreibung>6 Bohrloecher</beschreibung>
+        <arbeitszeit>209</arbeitszeit>
+        <komments>
+            Komment für heute
+        </komments>
+    </Anfrage>
+    <Anfrage>
+        <id>4</id>
+        <datumS>2.03.2022 </datumS>
+        <bezeichnung>Erk-Schottland</bezeichnung>
+        <gewerk>Bohrung</gewerk>
+        <firma>Illwerke</firma>
+        <land>Oesterreich</land>
+        <deadline>01.05.2022</deadline>
+        <summe>20000034.00</summe>
+        <kennzahl>2</kennzahl>
+        <angNummer>An99-2022</angNummer>
+        <beschreibung>6 Bohrloecher</beschreibung>
+        <arbeitszeit>209</arbeitszeit>
+        <komments>
+            Komment für heute
+        </komments>
+    </Anfrage>
+    <Anfrage>
+        <id>4</id>
+        <datumS>2.03.2022 </datumS>
+        <bezeichnung>Erk-Schottland</bezeichnung>
+        <gewerk>Bohrung</gewerk>
+        <firma>Illwerke</firma>
+        <land>Oesterreich</land>
+        <deadline>01.05.2022</deadline>
+        <summe>20000034.00</summe>
+        <kennzahl>5</kennzahl>
+        <angNummer>An99-2022</angNummer>
+        <beschreibung>6 Bohrloecher</beschreibung>
+        <arbeitszeit>209</arbeitszeit>
+        <komments>
+            Komment für heute
+        </komments>
+    </Anfrage>
+    <Anfrage>
+        <id>4</id>
+        <datumS>2.03.2022 </datumS>
+        <bezeichnung>Erk-Schottland</bezeichnung>
+        <gewerk>Bohrung</gewerk>
+        <firma>Illwerke</firma>
+        <land>Oesterreich</land>
+        <deadline>01.05.2022</deadline>
+        <summe>20000034.00</summe>
+        <kennzahl>4</kennzahl>
+        <angNummer>An99-2022</angNummer>
+        <beschreibung>6 Bohrloecher</beschreibung>
+        <arbeitszeit>209</arbeitszeit>
+        <komments>
+            Komment für heute
+        </komments>
+    </Anfrage>
+
+</Anfragen>
