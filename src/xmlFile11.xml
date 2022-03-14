@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Anfragen>
+    <Anfrage>
+        <id>2</id>
+        <datumS>01.01.22</datumS>
+        <bezeichnung>Beschreibung</bezeichnung>
+        <gewerk>Tunnel-1</gewerk>
+        <firma>Express-F</firma>
+        <land>France</land>
+        <deadline>208.gh</deadline>
+        <summe>2034.0</summe>
+        <kennzahl>1</kennzahl>
+        <angebotsnummer>An78-2022bbb</angebotsnummer>
+        <beschreibung>ein neue Tunel in Tulon 2</beschreibung>
+        <arbeitszeit> </arbeitszeit>
+        <komments>- - - - - - - - - - - - - - - - - - - - - - - &#13;
+Tue Mar 08 14:24:37 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit:  30&#13;
+Tue Mar 08 14:24:24 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit:  30&#13;
+Tue Mar 08 14:24:24 CET 2022 -ID wurde geändert. Neue ID: 2&#13;
+Tue Mar 08 14:24:16 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit:  30&#13;
+Tue Mar 08 14:24:09 CET 2022 -ID wurde geändert. Neue ID: 21&#13;
+Tue Mar 08 14:23:46 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit:  20&#13;
+Tue Mar 08 14:21:24 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit:  10&#13;
+Tue Mar 08 14:07:40 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: _&#13;
+Tue Mar 08 14:07:40 CET 2022 -Beschreibung wurde geändert. Neue Beschreibung: ein neue Tunel in Tulon 2&#13;
+Tue Mar 08 14:04:23 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: _&#13;
+Tue Mar 08 14:04:08 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: _&#13;
+Tue Mar 08 14:04:08 CET 2022 -Beschreibung wurde geändert. Neue Beschreibung: 2&#13;
+Tue Mar 08 14:02:14 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: _&#13;
+Tue Mar 08 14:02:14 CET 2022 -Beschreibung wurde geändert. Neue Beschreibung: 2&#13;
+Tue Mar 08 13:34:21 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: _&#13;
+Tue Mar 08 13:34:09 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: _&#13;
+Tue Mar 08 13:34:09 CET 2022 -Datum wurde geändert. Neues Datum: 01.01.22&#13;
+Tue Mar 08 13:25:24 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: _&#13;
+Tue Mar 08 13:25:24 CET 2022 -ID wurde geändert. Neue ID: Tunnel-1&#13;
+Tue Mar 08 12:14:23 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: _&#13;
+Tue Mar 08 12:14:14 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: _&#13;
+Tue Mar 08 12:14:14 CET 2022 -Dead line wurde geändert. Neue dead line: 208.gh&#13;
+Tue Mar 08 12:14:14 CET 2022 -ID wurde geändert. Neue ID: Das Gewerk&#13;
+Tue Mar 08 12:14:14 CET 2022 -Datum wurde geändert. Neues Datum: Tunnel&#13;
+Tue Mar 08 11:55:12 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: &#13;
+Tue Mar 08 11:55:12 CET 2022 -Land wurde geändert. Neues Land: France&#13;
+Tue Mar 08 11:55:12 CET 2022 -Firma wurde geändert. Neue Firma: Express-F&#13;
+Tue Mar 08 11:55:12 CET 2022 -ID wurde geändert. Neue ID: Tunnel&#13;
+Tue Mar 08 11:39:48 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: 10&#13;
+Tue Mar 08 11:39:42 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: 10&#13;
+Tue Mar 08 11:33:11 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: Arbeitszeit&#13;
+Tue Mar 08 11:33:11 CET 2022 -Angebotsnummer wurde geändert. Neue Nummer: An78-2022bbb&#13;
+Tue Mar 08 11:30:43 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: Arbeitszeit&#13;
+Tue Mar 08 11:30:43 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: Arbeitszeit&#13;
+Tue Mar 08 11:30:43 CET 2022 -ID wurde geändert. Neue ID: 2&#13;
+Tue Mar 08 11:25:00 CET 2022ID wurde geändert. Neue ID: 232&#13;
+Tue Mar 08 11:24:40 CET 2022ID wurde geändert. Neue ID: 23&#13;
+Tue Mar 08 09:55:26 CET 2022d&#13;
+Tue Mar 08 09:55:10 CET 2022ID wurde geändert. Neue ID: 2&#13;
+Tue Mar 08 09:53:39 CET 2022neue Kommentar&#13;
+Tue Mar 08 09:53:39 CET 2022ID wurde geändert. Neue ID: 56&#13;
+Tue Mar 08 09:53:14 CET 2022 -  &#13;
+Tue Mar 08 09:53:09 CET 2022 -&#13;
+Tue Mar 08 09:52:12 CET 2022----&#13;
+Tue Mar 08 09:50:18 CET 2022 - &#13;
+Tue Mar 08 09:50:13 CET 2022 - &#13;
+Tue Mar 08 09:50:12 CET 2022 - &#13;
+Tue Mar 08 09:50:05 CET 2022----&#13;
+Tue Mar 08 09:50:05 CET 2022ID wurde geändert. Neue ID: 2&#13;
+Tue Mar 08 09:47:53 CET 2022 - &#13;
+Tue Mar 08 09:47:52 CET 2022 - &#13;
+Tue Mar 08 09:47:51 CET 2022 - &#13;
+Tue Mar 08 09:47:50 CET 2022----&#13;
+Tue Mar 08 09:47:17 CET 2022----&#13;
+Tue Mar 08 09:22:14 CET 2022---- geändert Kennzahl&#13;
+Tue Mar 08 09:21:21 CET 2022----&#13;
+Tue Mar 08 09:20:45 CET 2022 - &#13;
+Tue Mar 08 09:20:28 CET 2022----5 komm&#13;
+Tue Mar 08 09:19:40 CET 20224 kom&#13;
+Tue Mar 08 09:19:31 CET 2022----3 komm&#13;
+Tue Mar 08 09:17:31 CET 2022----2 komm&#13;
+Tue Mar 08 09:17:12 CET 2022----1 komm - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </komments>
+    </Anfrage>
+    <Anfrage>
+        <id>2</id>
+        <datumS>Bohrung</datumS>
+        <bezeichnung>6 Bohrloecher</bezeichnung>
+        <gewerk>Das Gewerk</gewerk>
+        <firma>Illwerke</firma>
+        <land>Oesterreich</land>
+        <deadline>01.05.2022</deadline>
+        <summe>2.0000034E7</summe>
+        <kennzahl>5</kennzahl>
+        <angebotsnummer>An99-2022</angebotsnummer>
+        <beschreibung>Beschreibung</beschreibung>
+        <arbeitszeit> </arbeitszeit>
+        <komments>- - - - - - - - - - - - - - - - - - - - - - - &#13;
+Tue Mar 08 12:12:01 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: _&#13;
+Tue Mar 08 12:11:58 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: _&#13;
+Tue Mar 08 12:11:49 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: _&#13;
+Tue Mar 08 12:11:47 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: _&#13;
+Tue Mar 08 12:11:46 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: _&#13;
+Tue Mar 08 12:11:20 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: _&#13;
+Tue Mar 08 12:11:20 CET 2022 -Beschreibung wurde geändert. Neue Beschreibung: 2&#13;
+Tue Mar 08 12:11:20 CET 2022 -ID wurde geändert. Neue ID: Das Gewerk&#13;
+Tue Mar 08 12:11:20 CET 2022 -Bezeichnung wurde geändert. Neue Bezeichnung: 6 Bohrloecher&#13;
+Tue Mar 08 12:11:20 CET 2022 -Datum wurde geändert. Neues Datum: BohrungTue Mar 08 09:10:52 CET 2022- - - - &#13;
+ /_/- &#13;
+ /_/- &#13;
+ /_/- &#13;
+ /_/- &#13;
+ /_/- &#13;
+Tue Mar 08 08:51:23 CET 2022 /_/ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </komments>
+    </Anfrage>
+    <Anfrage>
+        <id>3</id>
+        <datumS>22.03.2022 </datumS>
+        <bezeichnung>Nurkasgan (KZ)_2</bezeichnung>
+        <gewerk>Schacht</gewerk>
+        <firma>Dings_Metall</firma>
+        <land>KZ</land>
+        <deadline>d-line</deadline>
+        <summe>200034.0</summe>
+        <kennzahl>2</kennzahl>
+        <angebotsnummer>An78-2022</angebotsnummer>
+        <beschreibung>neue Beschreibung des Angebotes</beschreibung>
+        <arbeitszeit> 56</arbeitszeit>
+        <komments>- - - - - - - - - - - - - - - - - - - - - - - Tue Mar 08 09:10:52 CET 2022- - - - &#13;
+ /_/- &#13;
+ /_/- &#13;
+ /_/- &#13;
+ /_/- &#13;
+ /_/- &#13;
+Tue Mar 08 08:51:23 CET 2022 /_/ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - &#13;
+Tue Mar 08 14:51:20 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit:__  56&#13;
+Tue Mar 08 14:59:00 CET 2022 -Bezeichnung wurde geändert. Neue Bezeichnung:__ Nurkasgan (KZ)_2</komments>
+    </Anfrage>
+    <Anfrage>
+        <id>4</id>
+        <datumS>2.03.2022 </datumS>
+        <bezeichnung>SKRU-2</bezeichnung>
+        <gewerk>Tunnelbauwerk</gewerk>
+        <firma>Brussel-Water-Plant</firma>
+        <land>Belgien</land>
+        <deadline>01.05.2022</deadline>
+        <summe>2.0000034E7</summe>
+        <kennzahl>3</kennzahl>
+        <angebotsnummer>An99-2022</angebotsnummer>
+        <beschreibung>Betontunnel</beschreibung>
+        <arbeitszeit> 190</arbeitszeit>
+        <komments>- - - - - - - - - - - - - - - - - - - - - - - Tue Mar 08 09:10:52 CET 2022- - - - &#13;
+ /_/- &#13;
+ /_/- &#13;
+ /_/- &#13;
+ /_/- &#13;
+ /_/- &#13;
+Tue Mar 08 08:51:23 CET 2022 /_/ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - &#13;
+Tue Mar 08 14:43:21 CET 2022 -Firma wurde geändert. Neue Firma: Brussel-Water-Plant&#13;
+Tue Mar 08 14:43:21 CET 2022 -Land wurde geändert. Neues Land: Belgien&#13;
+Tue Mar 08 14:43:21 CET 2022 -Beschreibung wurde geändert. Neue Beschreibung: Betontunnel&#13;
+Tue Mar 08 14:43:21 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit:  190&#13;
+Tue Mar 08 14:43:52 CET 2022 -ID wurde geändert. Neue ID: Tunnelbauwerk</komments>
+    </Anfrage>
+    <Anfrage>
+        <id>5</id>
+        <datumS>2.03.2022 </datumS>
+        <bezeichnung>Erk-Schottland</bezeichnung>
+        <gewerk>Bohrung</gewerk>
+        <firma>Illwerke</firma>
+        <land>Oesterreich</land>
+        <deadline>01.05.2022</deadline>
+        <summe>2.0000034E7</summe>
+        <kennzahl>4</kennzahl>
+        <angebotsnummer>An99-2022</angebotsnummer>
+        <beschreibung>6 Bohrloecher</beschreibung>
+        <arbeitszeit> </arbeitszeit>
+        <komments>- - - - - - - - - - - - - - - - - - - - - - - Tue Mar 08 09:10:52 CET 2022- - - - &#13;
+ /_/- &#13;
+ /_/- &#13;
+ /_/- &#13;
+ /_/- &#13;
+ /_/- &#13;
+Tue Mar 08 08:51:23 CET 2022 /_/ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </komments>
+    </Anfrage>
+    <Anfrage>
+        <id>6</id>
+        <datumS>2.03.2022 </datumS>
+        <bezeichnung>Erk-Schottland</bezeichnung>
+        <gewerk>Reise-Bohrung</gewerk>
+        <firma>Invernes</firma>
+        <land>Schottland</land>
+        <deadline>01.05.2022</deadline>
+        <summe>1500000.0</summe>
+        <kennzahl>3</kennzahl>
+        <angebotsnummer>An99-2022</angebotsnummer>
+        <beschreibung>Reisebohren in Schottland</beschreibung>
+        <arbeitszeit> 10</arbeitszeit>
+        <komments>- - - - - - - - - - - - - - - - - - - - - - - &#13;
+Tue Mar 08 14:32:19 CET 2022 -Beschreibung wurde geändert. Neue Beschreibung: Reisebohren in Schottland&#13;
+Tue Mar 08 14:32:19 CET 2022 -Summe wurde geändert. Neue Summe: 1500000&#13;
+Tue Mar 08 14:32:19 CET 2022 -Land wurde geändert. Neues Land: Schottland&#13;
+Tue Mar 08 14:32:19 CET 2022 -Firma wurde geändert. Neue Firma: Invernes&#13;
+Tue Mar 08 14:32:19 CET 2022 -ID wurde geändert. Neue ID: Reise-BohrungTue Mar 08 09:10:52 CET 2022- - - - &#13;
+ /_/- &#13;
+ /_/- &#13;
+ /_/- &#13;
+ /_/- &#13;
+ /_/- &#13;
+Tue Mar 08 08:51:23 CET 2022 /_/ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - &#13;
+Tue Mar 08 14:38:56 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit:  10</komments>
+    </Anfrage>
+    <Anfrage>
+        <id>7</id>
+        <datumS>2.03.2022 </datumS>
+        <bezeichnung>Erk-Schottland</bezeichnung>
+        <gewerk>Bohrung</gewerk>
+        <firma>Illwerke</firma>
+        <land>Oesterreich</land>
+        <deadline>01.05.2022</deadline>
+        <summe>2.0000034E7</summe>
+        <kennzahl>2</kennzahl>
+        <angebotsnummer>An99-2022</angebotsnummer>
+        <beschreibung>6 Bohrloecher</beschreibung>
+        <arbeitszeit> </arbeitszeit>
+        <komments>- - - - - - - - - - - - - - - - - - - - - - - &#13;
+Tue Mar 08 13:37:32 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: _&#13;
+Tue Mar 08 13:35:37 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: _&#13;
+Tue Mar 08 13:35:26 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: _&#13;
+Tue Mar 08 13:35:15 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: _&#13;
+Tue Mar 08 13:35:15 CET 2022 -Kennzahl wurde geändert. Neue Kennzahl: 2Tue Mar 08 09:10:52 CET 2022- - - - &#13;
+ /_/- &#13;
+ /_/- &#13;
+ /_/- &#13;
+ /_/- &#13;
+ /_/- &#13;
+Tue Mar 08 08:51:23 CET 2022 /_/ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </komments>
+    </Anfrage>
+    <Anfrage>
+        <id>8</id>
+        <datumS>03.04.22</datumS>
+        <bezeichnung>Beschreibung</bezeichnung>
+        <gewerk>Bohrloch</gewerk>
+        <firma>WienEnergie</firma>
+        <land>Oesterreich</land>
+        <deadline>01.05.2022</deadline>
+        <summe>200000.0</summe>
+        <kennzahl>1</kennzahl>
+        <angebotsnummer>An99-2022bn</angebotsnummer>
+        <beschreibung>Erkundungsbohrung 1000m tief</beschreibung>
+        <arbeitszeit> </arbeitszeit>
+        <komments>- - - - - - - - - - - - - - - - - - - - - - - &#13;
+Tue Mar 08 14:30:06 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit:  20&#13;
+Tue Mar 08 14:30:06 CET 2022 -Beschreibung wurde geändert. Neue Beschreibung: Erkundungsbohrung 1000m tief&#13;
+Tue Mar 08 14:30:06 CET 2022 -Angebotsnummer wurde geändert. Neue Nummer: An99-2022bn&#13;
+Tue Mar 08 14:30:06 CET 2022 -Summe wurde geändert. Neue Summe: 200000&#13;
+Tue Mar 08 14:30:06 CET 2022 -Firma wurde geändert. Neue Firma: WienEnergie&#13;
+Tue Mar 08 14:30:06 CET 2022 -ID wurde geändert. Neue ID: Bohrloch&#13;
+Tue Mar 08 13:36:34 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: _&#13;
+Tue Mar 08 13:36:34 CET 2022 -Kennzahl wurde geändert. Neue Kennzahl: 1&#13;
+Tue Mar 08 13:36:07 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: _&#13;
+Tue Mar 08 13:36:07 CET 2022 -Datum wurde geändert. Neues Datum: 03.04.22&#13;
+Tue Mar 08 11:36:24 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: 10&#13;
+Tue Mar 08 11:36:23 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: 10&#13;
+Tue Mar 08 11:36:23 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: 10&#13;
+Tue Mar 08 11:36:20 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: 10&#13;
+Tue Mar 08 11:36:15 CET 2022 -Arbeitszeit wurde geändert. Neue Arbeitszeit: 10&#13;
+Tue Mar 08 11:36:15 CET 2022 -Datum wurde geändert. Neues Datum: Das GewerkTue Mar 08 09:10:52 CET 2022- - - - &#13;
+ /_/- &#13;
+ /_/- &#13;
+ /_/- &#13;
+ /_/- &#13;
+ /_/- &#13;
+Tue Mar 08 08:51:23 CET 2022 /_/ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </komments>
+    </Anfrage>
+    <Anfrage>
+        <id>9</id>
+        <datumS>2.03.2022 </datumS>
+        <bezeichnung>Erk-Schottland</bezeichnung>
+        <gewerk>Bohrung</gewerk>
+        <firma>Illwerke</firma>
+        <land>Oesterreich</land>
+        <deadline>01.05.2022</deadline>
+        <summe>2.0000034E7</summe>
+        <kennzahl>3</kennzahl>
+        <angebotsnummer>An99-2022</angebotsnummer>
+        <beschreibung>6 Bohrloecher</beschreibung>
+        <arbeitszeit> </arbeitszeit>
+        <komments>- - - - - - - - - - - - - - - - - - - - - - - Tue Mar 08 09:10:52 CET 2022- - - - &#13;
+ /_/- &#13;
+ /_/- &#13;
+ /_/- &#13;
+ /_/- &#13;
+ /_/- &#13;
+Tue Mar 08 08:51:23 CET 2022 /_/ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - &#13;
+Tue Mar 08 14:51:41 CET 2022 -Kennzahl wurde geändert. Neue Kennzahl:__ 3</komments>
+    </Anfrage>
+    <Anfrage>
+        <id>10</id>
+        <datumS>2.03.2022 </datumS>
+        <bezeichnung>Erk-Schottland</bezeichnung>
+        <gewerk>Bohrung</gewerk>
+        <firma>Illwerke</firma>
+        <land>Oesterreich</land>
+        <deadline>01.05.2022</deadline>
+        <summe>2.0000034E7</summe>
+        <kennzahl>4</kennzahl>
+        <angebotsnummer>An99-2022</angebotsnummer>
+        <beschreibung>6 Bohrloecher</beschreibung>
+        <arbeitszeit> </arbeitszeit>
+        <komments>- - - - - - - - - - - - - - - - - - - - - - - Tue Mar 08 09:10:52 CET 2022- - - - &#13;
+ /_/- &#13;
+ /_/- &#13;
+ /_/- &#13;
+ /_/- &#13;
+ /_/- &#13;
+Tue Mar 08 08:51:23 CET 2022 /_/ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </komments>
+    </Anfrage>
+    <Anfrage>
+        <id>11</id>
+        <datumS> Tue Mar 08 15:58:14 CET 2022</datumS>
+        <bezeichnung> vvvvvvvvv</bezeichnung>
+        <gewerk> Stahlbau</gewerk>
+        <firma> TS-Bau</firma>
+        <land> DE</land>
+        <deadline> 02.08.22</deadline>
+        <summe>230.0</summe>
+        <kennzahl>1</kennzahl>
+        <angebotsnummer> </angebotsnummer>
+        <beschreibung> </beschreibung>
+        <arbeitszeit> </arbeitszeit>
+        <komments>- - - - - - - </komments>
+    </Anfrage>
+    <Anfrage>
+        <id>12</id>
+        <datumS> Tue Mar 08 16:00:13 CET 2022</datumS>
+        <bezeichnung> Pipeline MH</bezeichnung>
+        <gewerk> Pipeline-Gas</gewerk>
+        <firma> Eon</firma>
+        <land> Deutschland</land>
+        <deadline> 09.09.23</deadline>
+        <summe>102000.0</summe>
+        <kennzahl>1</kennzahl>
+        <angebotsnummer> Ang-234-09</angebotsnummer>
+        <beschreibung> </beschreibung>
+        <arbeitszeit> </arbeitszeit>
+        <komments>- - - - - - &#13;
+Tue Mar 08 16:00:55 CET 2022neue Arbeit mit großer Wahrscheinlichkeit</komments>
+    </Anfrage>
+</Anfragen>

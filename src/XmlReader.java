@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class XmlReader {
 
-    String name = "xmlFile";
+    String name = "xmlFile11";
     String textErgebnis = "";
    static ArrayList<Anfrage> anfrageList =  new ArrayList<>();
 
@@ -60,7 +60,7 @@ public class XmlReader {
             anfrage.setDeadline(getTagValue("deadline", element));
             anfrage.setSumme(Double.parseDouble(getTagValue("summe", element)));
             anfrage.setKennZahl(Integer.parseInt(getTagValue("kennzahl", element)));
-            anfrage.setAngebotsNummer(getTagValue("angNummer", element));
+            anfrage.setAngebotsNummer(getTagValue("angebotsnummer", element));
             anfrage.setBeschreibung(getTagValue("beschreibung", element));
         anfrage.setArbeitsZeit(getTagValue("arbeitszeit", element));
         anfrage.setKomments(getTagValue("komments", element));

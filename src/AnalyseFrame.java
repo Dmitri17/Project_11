@@ -1,10 +1,12 @@
 import javax.swing.*;
 import javax.swing.border.Border;
+import javax.swing.text.BadLocationException;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -14,6 +16,14 @@ public class AnalyseFrame  extends JFrame {
     JTextArea neuDatum;
     JTextArea neuBezeichnung;
     JTextArea neuGewerk;
+    JTextArea neuFirma;
+    JTextArea neuLand;
+    JTextArea neuDeadLine;
+    JTextArea neuSumme;
+    JTextArea neuKennzahl;
+    JTextArea neuAngebotsNummer;
+    JTextArea neuArbZeit;
+    JTextArea neuBeschreibung;
 
     public AnalyseFrame( ){
        super("Thyssen Schachtbau GmbH                                     Anfragen in ZD ");
@@ -26,6 +36,7 @@ public class AnalyseFrame  extends JFrame {
         //  this.setSize(dim);
         this.setSize(width, height);
         this.setLocation(50, 35);
+
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 // панель для корзины
@@ -55,31 +66,34 @@ public class AnalyseFrame  extends JFrame {
         JScrollPane neueAnfPanel = new JScrollPane(neueAnfrage,JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         neueAnfrage.setLayout(new GridLayout(15, 2, 3, 3));
         neuDatum = new JTextArea();
-        neuDatum.setText("здесь должна быть актуальная дата");
-
+        neuDatum.setText(new Date().toString());
         neuDatum.setBorder(genTitleBorder("Datum der Anfrage"));
         neuBezeichnung = new JTextArea();
         neuBezeichnung.setText("vvvvvvvvv");
         neuBezeichnung.setBorder(genTitleBorder("Bezeichnung"));
         neuGewerk = new JTextArea();
         neuGewerk.setBorder(genTitleBorder("Gewerk"));
-        JTextArea neuFirma = new JTextArea();
+        neuFirma = new JTextArea();
         neuFirma.setBorder(genTitleBorder("Firma"));
-        JTextArea neuLand = new JTextArea();
+        neuLand = new JTextArea();
         neuLand.setBorder(genTitleBorder("Land"));
-        JTextArea neuDeadLine = new JTextArea();
+        neuDeadLine = new JTextArea();
         neuDeadLine.setBorder(genTitleBorder("Deadline"));
-        JTextArea neuSumme = new JTextArea();
+        neuSumme = new JTextArea();
         neuSumme.setBorder(genTitleBorder("Summe"));
-        JTextArea neuKennzahl = new JTextArea();
+        neuKennzahl = new JTextArea();
         neuKennzahl.setBorder(genTitleBorder("KennZahl"));
-        JTextArea neuAngebotsNummer = new JTextArea();
+        neuAngebotsNummer = new JTextArea();
         neuAngebotsNummer.setBorder(genTitleBorder("Angebotsnummer"));
-        JTextArea neuBeschreibung = new JTextArea();
+        neuBeschreibung = new JTextArea();
         neuBeschreibung.setBorder(genTitleBorder("Beschreibung"));
+        neuArbZeit= new JTextArea();
+        neuArbZeit.setBorder(genTitleBorder("Arbeitszeit"));
 
         JButton saveButt = new JButton("Eintragen(Speichern)");
         saveButt.setForeground(Color.BLUE);
+        saveButt.addActionListener(new SaveButtEventListener(new Anfrage()));
+
 // создаем getter-ы для полей формы
 
 
@@ -282,18 +296,19 @@ public OpenButtonEventListener(Anfrage a){
 
             System.out.println("кнопка нажата");
             try {
-                bearb = new BearbForm();
+                bearb = new BearbForm(anf_Bearb);
+                bearb.setTitle(anf_Bearb.getBezeichnung() +" - " + anf_Bearb.getAnfragendeFa());
                 bearb.idText.setText(String.valueOf(anf_Bearb.getId()));
                 bearb.datumText.setText(anf_Bearb.getDatumS());
                 bearb.bezeichnungText.setText(anf_Bearb.getBezeichnung());
-                bearb.datumText.setText(anf_Bearb.getGewerk());
+                bearb.gewerkText.setText(anf_Bearb.getGewerk());
                 bearb.firmaText.setText(anf_Bearb.getAnfragendeFa());
                 bearb.landText.setText(anf_Bearb.getLand());
                 bearb.deadText.setText(anf_Bearb.getDeadline());
                 bearb.summeText.setText(String.valueOf(anf_Bearb.getSumme()));
                 bearb.statusText.setText(String.valueOf(anf_Bearb.getKennZahl()));
                 bearb.angebNumText.setText(anf_Bearb.getAngebotsNummer());
-                bearb.bezeichnungText.setText(anf_Bearb.getBeschreibung());
+                bearb.beschreibText.setText(anf_Bearb.getBeschreibung());
                 bearb.kommText.setText(anf_Bearb.getKomments());
 
 
@@ -302,11 +317,58 @@ public OpenButtonEventListener(Anfrage a){
 
             }catch (IOException ex) {
                 Logger.getLogger(AnalyseFrame.class.getName()).log(Level.SEVERE, " Я не могу создать  форму для обработки!!!", ex);
+            } catch (BadLocationException ex) {
+                ex.printStackTrace();
             }
 
         }
 
     }
 
+    class SaveButtEventListener implements ActionListener {
+
+        Anfrage neuAnf ;
+
+        public SaveButtEventListener(Anfrage a){
+            this.neuAnf = a;
+
+        }
+
+
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            // находим самый большой ID
+            int idMax = 0;
+            for (Anfrage a:XmlReader.anfrageList) {
+                if(idMax < a.getId()){
+                    idMax = a.getId();
+                }
+
+            }
+            idMax ++;
+            neuAnf.setId(idMax);
+            neuAnf.setDatumS(" " +new Date().toString());
+            neuAnf.setBezeichnung(" " +neuBezeichnung.getText());
+            neuAnf.setGewerk(" " +neuGewerk.getText());
+            neuAnf.setAnfragendeFa(" " +neuFirma.getText());
+            neuAnf.setLand(" " +neuLand.getText());
+            neuAnf.setDeadline(" " +neuDeadLine.getText());
+            neuAnf.setSumme(Double.parseDouble(neuSumme.getText()));
+
+                neuAnf.setKennZahl(Integer.parseInt(neuKennzahl.getText()));
+
+
+            neuAnf.setAngebotsNummer(" " +neuAngebotsNummer.getText());
+            neuAnf.setBeschreibung(" " +neuBeschreibung.getText());
+            neuAnf.setArbeitsZeit(" "+ neuArbZeit.getText());
+
+
+XmlReader.anfrageList.add(neuAnf);
+            XmlWriter.writeXML();
+            System.out.println("назжата кнопка новой заявки");
+        }
+
+    }
 
 }

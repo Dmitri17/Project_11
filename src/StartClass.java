@@ -8,8 +8,9 @@ public class StartClass {
         System.out.println("Hallo Du!");
 
         XmlReader reader = new XmlReader();
-        reader.readFromFile("src/xmlFile.xml");
+        reader.readFromFile("Z:\\Lepeschko\\anfragenstorage\\storage1\\xmlFile11.xml");
 // здесь у нас создается новый список из заявок, прочитанных из файла
+        // neu Komment
 AnalyseFrame af = new AnalyseFrame();
         af.setVisible(true);
 

@@ -28,7 +28,7 @@ public class Anfrage {
     }
 
     public double getSumme() {
-        return Summe;
+        return summe;
     }
 
     public int getKennZahl() {
@@ -57,22 +57,29 @@ public class Anfrage {
     String gewerk = "";  // 4
     String anfragendeFa = "XML GmbH";  // 5
     String land = "";  //  6
-    String deadline =  new Date(100000000).toString(); // 7
-    double Summe = 100000.00;  // 8
+    String deadline =  " "; // 7
+    double summe = 100000.00;  // 8
     int kennZahl;  // 9
     String angebotsNummer = "xxx_000_22";  // 10
     String beschreibung = "Das ist eine neue Anfrage # ";  // 11
-    String arbeitsZeit = "0";  // 12
-    String komments = "Komments_Platzhalter";//13
+    String arbeitsZeit = " ";  // 12
+    String komments = "- ";//13
     public Anfrage(int id, String datumS,  String bezeichnung, String gewerk, String anfragendeFa, String land, String deadline, double summe,
                    int kennZahl, String angebotsNummer, String beschreibung, String arbeitsZeit, String komments ){
         this.id = id;
+        this.datumS = datumS;
         this.bezeichnung = bezeichnung;
         this.gewerk = gewerk;
         this.anfragendeFa = anfragendeFa;
         this.land = land;
+        this.deadline = deadline;
+        this.summe = summe;
         this.kennZahl = kennZahl;
-        this.land = land;
+        this.angebotsNummer = angebotsNummer;
+        this.beschreibung = beschreibung;
+        this.arbeitsZeit = arbeitsZeit;
+        this.komments = komments;
+
 
     };
 
@@ -101,7 +108,7 @@ public class Anfrage {
     }
 
     public void setSumme(double summe) {
-        Summe = summe;
+        this.summe = summe;
     }
 
     public void setKennZahl(int kennZahl) {
@@ -116,27 +123,11 @@ public class Anfrage {
         this.beschreibung = beschreibung;
     }
 
-    public void setArbeitsZeit(String neueArbeitsZeit) {
-        try {
-            int arbZeit = Integer.parseInt(arbeitsZeit);
-            arbZeit = arbZeit + Integer.parseInt(neueArbeitsZeit);
+    public void setArbeitsZeit(String arbeitsZeit) { this.arbeitsZeit = arbeitsZeit; }
 
-            this.arbeitsZeit = String.valueOf(arbZeit);
-        }catch (Exception e){
-            //нужно написать всплывающее диалоговое окно для сообщения об ошибке
-            System.out.println(" falsche Zahlenformat!");
-            System.out.println();
-            e.printStackTrace();
 
-        }
 
-    }
-
-    public void setKomments(String neuKomment) {
-        Date heute = new Date();// при записи нового комментария добавляем время записи
-
-        this.komments = this.komments + System.lineSeparator() + heute.toString()+  " /_/" +  neuKomment;
-    }
+    public void setKomments(String neuKomment) {this.komments = this.komments  + neuKomment ;}
 
     public Anfrage(int id, String dateS, String bezeichnung, String gewerk, int kennZahl, String land ){
         this.id = id;
