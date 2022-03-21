@@ -4,10 +4,10 @@ import javax.swing.text.BadLocationException;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.io.IOException;
 import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 
 public class BearbForm extends JFrame {
@@ -96,7 +96,7 @@ this.anf_Save = a;
         this.add(pan0);
         this.setTitle(formName);
         try{
-            logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("ts_logo.gif")));
+            logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("ts-logo.jpg")));
 
         }catch (Exception e){
             System.out.println("не найден файл для рисунка");
@@ -115,18 +115,26 @@ this.anf_Save = a;
         pan1.setLayout(new GridLayout(1, 3, 5, 5));
         pan1.setBackground(Color.GRAY);
 
-        pan11 = generPan("Hauptparameter");
-        pan11.setLayout(new GridLayout(4,1,5,5));
+        pan11 = generPan("");
+        pan11.setBackground(Color.GREEN);
+        logo.setHorizontalAlignment(0);
+        pan11.add(logo);
+        pan11.setLayout(new GridLayout(3,1,5,5));
         landText.setBorder(genTitleBorder("Land"));
+        landText.addKeyListener(new BearbKeyListener(anf_Save));
 
         gewerkText.setBorder(genTitleBorder("Gewerk"));
         angebNumText.setBorder(genTitleBorder("Angebot Nr."));
+        angebNumText.addKeyListener(new BearbKeyListener(anf_Save));
 
         pan11.add(landText);// создаем группу в левом окне сверху
         pan11.add(gewerkText);
         pan11.add(angebNumText);
+
         firmaText.setBorder(genTitleBorder("Firma"));
+        firmaText.addKeyListener(new BearbKeyListener(anf_Save));
         pan11.add(firmaText);
+        pan11.add(summeText);
         pan1.add(pan11);
 
 
@@ -138,38 +146,46 @@ this.anf_Save = a;
 
         bezeichnungText.setBorder(genTitleBorder("Projekt"));
 bezeichnungText.setText("bez.");
+bezeichnungText.addKeyListener(new BearbKeyListener(anf_Save));
         pan131.add(bezeichnungText);
         pan131.setBackground(Color.WHITE);
         pan131.setAlignmentX(CENTER_ALIGNMENT);
 
         pan12= generPan(""); // формируем среднюю группу сверху
         pan12.setLayout(new GridLayout(2, 1,5,5));
+        pan12.setBackground(Color.GREEN);
 
        // pan12.add(pan131, BorderLayout.NORTH);
 beschreibText.setBorder(genTitleBorder("Kurze Zusammenfassung"));
+beschreibText.addKeyListener(new BearbKeyListener(anf_Save));
 
         pan12.add(bezeichnungText);
         pan12.add(beschreibText);
         pan1.add(pan12);
 
         pan13 = generPan("Anfrageparameter");
+        pan13.setBackground(Color.GREEN);
         pan13.setAlignmentX(BOTTOM_ALIGNMENT);
-        pan13.setLayout(new GridLayout(3, 1, 5, 5));
+        pan13.setLayout(new GridLayout(5, 1, 5, 5));
         datumText.setBorder(genTitleBorder("Datum"));
+        datumText.addKeyListener(new BearbKeyListener(anf_Save));
         pan13.add(datumText);
         deadText.setBorder(genTitleBorder("Deadline"));
+        deadText.addKeyListener(new BearbKeyListener(anf_Save));
         pan13.add(deadText);
         idText.setBorder(genTitleBorder("ID"));
         pan13.add(idText);
         statusText.setBorder(genTitleBorder("Kennzahl"));
+        statusText.addKeyListener(new BearbKeyListener(anf_Save));
         statusText.setToolTipText("1-neue Anfrage; 2- in Bearbeitung; 3- Abgabereif; 4- in Ausführung; 5- Korb");
         pan13.add(statusText);
         arbZeitText.setBorder(genTitleBorder("Arbeitszeit"));
         arbZeitText.setText(a.getArbeitsZeit());
+        arbZeitText.addKeyListener(new BearbKeyListener(anf_Save));
         pan13.add(arbZeitText);
-
-        summeText.setBorder(genTitleBorder("Summe Euro"));
-        pan13.add(summeText);
+       summeText.setBorder(genTitleBorder("Summe Euro"));
+       summeText.addKeyListener(new BearbKeyListener(anf_Save));
+       // pan13.add(summeText);
         pan1.add(pan13);// сформировали верхнюю панель
         // kommText.setBackground(Color.LIGHT_GRAY);
 
@@ -193,6 +209,8 @@ beschreibText.setBorder(genTitleBorder("Kurze Zusammenfassung"));
        JScrollPane neuKom = new JScrollPane(neuKommentText, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 
         neuKommentText.setBorder(genTitleBorder("neue Kommentar"));
+        neuKommentText.addKeyListener(new BearbKeyListener(anf_Save));
+
 
         neuKommentText.getLineStartOffset(0);
         pan2.add(neuKommentText, BorderLayout.NORTH);
@@ -220,14 +238,14 @@ beschreibText.setBorder(genTitleBorder("Kurze Zusammenfassung"));
                 anf_Save.setLand(landText.getText());
                 deadlineUpdate();
                 anf_Save.setDeadline(deadText.getText());
+                summeUpdate();
+                anf_Save.setSumme(summeText.getText());
                 try {
-                    summeUpdate();
-                    anf_Save.setSumme(Double.parseDouble(summeText.getText()));
                     kennzahlUpdate();
                     anf_Save.setKennZahl(Integer.parseInt(statusText.getText()));
                 }catch ( NumberFormatException numberF ){
                     System.out.println("Falsche Format");
-                };
+                }
 
 
 
@@ -239,12 +257,12 @@ beschreibText.setBorder(genTitleBorder("Kurze Zusammenfassung"));
                 anf_Save.setArbeitsZeit(arbZeitText.getText());
                 Date heute = new Date();
                 if (!neuKommentText.getText().equals("")){
-                    anf_Save.setKomments(System.lineSeparator() + heute.toString() + neuKommentText.getText());
+                    anf_Save.setKomments(System.lineSeparator() + heute + neuKommentText.getText());
                     neuKommentText.setText("");
                     kommText.setText(anf_Save.getKomments());
                 }
 
-                System.out.println("вывод после нажатия кнопки--/" + anf_Save.toString());
+                System.out.println("вывод после нажатия кнопки на панели редактирования--/" );
 
 
 
@@ -274,84 +292,84 @@ XmlWriter.writeXML();
 public void idUpdate(){
     if(anf_Save.getId() != Integer.parseInt(idText.getText())){
            Date h = new Date();
-        anf_Save.setKomments(System.lineSeparator() + h.toString() + " -ID wurde geändert. Neue ID:__ " + idText.getText());
+        anf_Save.setKomments(System.lineSeparator() + h + " -ID wurde geändert. Urspr:__ " + anf_Save.getId());
         kommText.setText(anf_Save.getKomments());
     }
 }
     public void datumSUpdate(){
         if(!anf_Save.getDatumS().equals(datumText.getText())){
            Date h = new Date();
-            anf_Save.setKomments(System.lineSeparator() + h.toString() + " -Datum wurde geändert. Neues Datum:__ " + datumText.getText());
+            anf_Save.setKomments(System.lineSeparator() + h + " -Datum wurde geändert. Urspr:__ " + anf_Save.getDatumS());
             kommText.setText(anf_Save.getKomments());
         }
     }
     public void bezeichnungUpdate(){
        if(!anf_Save.getBezeichnung().equals(bezeichnungText.getText())){
             Date h = new Date();
-            anf_Save.setKomments(System.lineSeparator() + h.toString() + " -Bezeichnung wurde geändert. Neue Bezeichnung:__ " + bezeichnungText.getText());
+            anf_Save.setKomments(System.lineSeparator() + h + " -Bezeichnung wurde geändert. Urspr:__ " + anf_Save.getBezeichnung());
            kommText.setText(anf_Save.getKomments());
        }
     }
     public void gewerkUpdate(){
         if(!anf_Save.getGewerk().equals(gewerkText.getText())){
              Date h = new Date();
-            anf_Save.setKomments(System.lineSeparator() + h.toString() + " -Gewerk wurde geändert. Neue Gewerk:__ " + gewerkText.getText());
+            anf_Save.setKomments(System.lineSeparator() + h + " -Gewerk wurde geändert. Urspr:__ " + anf_Save.getGewerk());
             kommText.setText(anf_Save.getKomments());
         }
     }
     public void firmaUpdate(){
         if(!anf_Save.getAnfragendeFa().equals(firmaText.getText())){
             Date h = new Date();
-            anf_Save.setKomments(System.lineSeparator() + h.toString() + " -Firma wurde geändert. Neue Firma:__ " + firmaText.getText());
+            anf_Save.setKomments(System.lineSeparator() + h + " -Firma wurde geändert. Urspr:__ " + anf_Save.getAnfragendeFa());
             kommText.setText(anf_Save.getKomments());
         }
     }
     public void landUpdate(){
         if(!anf_Save.getLand().equals(landText.getText())){
             Date h = new Date();
-            anf_Save.setKomments(System.lineSeparator() + h.toString() + " -Land wurde geändert. Neues Land:__ " + landText.getText());
+            anf_Save.setKomments(System.lineSeparator() + h + " -Land wurde geändert. Urspr:__ " + anf_Save.getLand());
             kommText.setText(anf_Save.getKomments());
         }
     }
     public void deadlineUpdate(){
         if(!anf_Save.getDeadline().equals(deadText.getText())){
             Date h = new Date();
-            anf_Save.setKomments(System.lineSeparator() + h.toString() + " -Dead line wurde geändert. Neue dead line:__ " + deadText.getText());
+            anf_Save.setKomments(System.lineSeparator() + h + " -Dead line wurde geändert. Urspr:__ " + anf_Save.getDeadline());
             kommText.setText(anf_Save.getKomments());
         }
     }
     public void summeUpdate(){
-        if(anf_Save.getSumme() != Double.parseDouble(summeText.getText())){
+        if(!anf_Save.getSumme().equals(summeText.getText())){
             Date h = new Date();
-            anf_Save.setKomments(System.lineSeparator() + h.toString() + " -Summe wurde geändert. Neue Summe:__ " + summeText.getText());
+            anf_Save.setKomments(System.lineSeparator() + h + " -Summe wurde geändert. Urspr:__ " + anf_Save.getSumme());
             kommText.setText(anf_Save.getKomments());
         }
     }
     public void kennzahlUpdate(){
         if(anf_Save.getKennZahl() != Integer.parseInt(statusText.getText())){
             Date h = new Date();
-            anf_Save.setKomments(System.lineSeparator() + h.toString() + " -Kennzahl wurde geändert. Neue Kennzahl:__ " + statusText.getText());
+            anf_Save.setKomments(System.lineSeparator() + h + " -Kennzahl wurde geändert. Urspr:__ " + anf_Save.getKennZahl());
             kommText.setText(anf_Save.getKomments());
         }
     }
     public void angebotsnummerUpdate(){
         if(!anf_Save.getAngebotsNummer().equals(angebNumText.getText())){
             Date h = new Date();
-            anf_Save.setKomments(System.lineSeparator() + h.toString() + " -Angebotsnummer wurde geändert. Neue Nummer:__ " + angebNumText.getText());
+            anf_Save.setKomments(System.lineSeparator() + h + " -Angebotsnummer wurde geändert. Urspr:__ " + anf_Save.getAngebotsNummer());
             kommText.setText(anf_Save.getKomments());
         }
     }
     public void beschreibungUpdate(){
         if(!anf_Save.getBeschreibung().equals(beschreibText.getText())){
             Date h = new Date();
-            anf_Save.setKomments(System.lineSeparator() + h.toString() + " -Beschreibung wurde geändert. Neue Beschreibung:__ " + beschreibText.getText());
+            anf_Save.setKomments(System.lineSeparator() + h + " -Beschreibung wurde geändert. Urspr:__ " + anf_Save.getBeschreibung());
             kommText.setText(anf_Save.getKomments());
         }
     }
     public void arbeitszeitUpdate(){
         if(!anf_Save.getArbeitsZeit().equals(arbZeitText.getText())){
             Date h = new Date();
-            anf_Save.setKomments(System.lineSeparator() + h.toString() + " -Arbeitszeit wurde geändert. Neue Arbeitszeit:__ " + arbZeitText.getText());
+            anf_Save.setKomments(System.lineSeparator() + h + " -Arbeitszeit wurde geändert. Urspr:__ " + anf_Save.getArbeitsZeit());
             kommText.setText(anf_Save.getKomments());
         }
     }
@@ -363,7 +381,7 @@ public void idUpdate(){
         public SaveButtonEventListener(Anfrage a){
             this.anf_S = a;
         }
-        XmlWriter writer = new XmlWriter();
+      //  XmlWriter writer = new XmlWriter();
 
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -372,6 +390,82 @@ public void idUpdate(){
         }
 
     }
+class BearbKeyListener implements KeyListener{
+
+        Anfrage anfSave;
+        public BearbKeyListener(Anfrage a){
+            this.anfSave = a;
+          //  XmlWriter wrKey = new XmlWriter();
+        }
+    @Override
+    public void keyTyped(KeyEvent e) {
+
+
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        if(e.getKeyCode() == KeyEvent.VK_ENTER){
+            System.out.println(" Enter pressed!!!");
+            try {idUpdate();
+                anf_Save.setId(Integer.parseInt(idText.getText()));
+            }catch (NumberFormatException numberFormatException){
+                System.out.println("falsche Zahlformat!");
+                numberFormatException.printStackTrace();
+            }
+            datumSUpdate();
+            anf_Save.setDatumS(datumText.getText());
+            bezeichnungUpdate();
+            anf_Save.setBezeichnung(bezeichnungText.getText());
+            gewerkUpdate();
+            anf_Save.setGewerk(gewerkText.getText());
+            firmaUpdate();
+            anf_Save.setAnfragendeFa(firmaText.getText());
+            landUpdate();
+            anf_Save.setLand(landText.getText());
+            deadlineUpdate();
+            anf_Save.setDeadline(deadText.getText());
+            summeUpdate();
+            anf_Save.setSumme(summeText.getText());
+            try {
+                kennzahlUpdate();
+                anf_Save.setKennZahl(Integer.parseInt(statusText.getText()));
+            }catch ( NumberFormatException numberF ){
+                System.out.println("Falsche Format");
+            };
+
+
+
+            angebotsnummerUpdate();
+            anf_Save.setAngebotsNummer(angebNumText.getText());
+            beschreibungUpdate();
+            anf_Save.setBeschreibung(beschreibText.getText());
+            arbeitszeitUpdate();
+            anf_Save.setArbeitsZeit(arbZeitText.getText());
+            Date heute = new Date();
+            if (!neuKommentText.getText().equals("")){
+                anf_Save.setKomments(System.lineSeparator() + heute + neuKommentText.getText());
+                neuKommentText.setText("");
+                kommText.setText(anf_Save.getKomments());
+            }
+
+            System.out.println("вывод после нажатия Enter--/" );
+
+
+
+
+            XmlWriter.writeXML();
+        }
+
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+
+
+    }
+}
+
 
 
 }

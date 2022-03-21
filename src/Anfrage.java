@@ -27,7 +27,7 @@ public class Anfrage {
         return deadline;
     }
 
-    public double getSumme() {
+    public String getSumme() {
         return summe;
     }
 
@@ -58,13 +58,13 @@ public class Anfrage {
     String anfragendeFa = "XML GmbH";  // 5
     String land = "";  //  6
     String deadline =  " "; // 7
-    double summe = 100000.00;  // 8
+    String summe = "000.00";  // 8
     int kennZahl;  // 9
     String angebotsNummer = "xxx_000_22";  // 10
     String beschreibung = "Das ist eine neue Anfrage # ";  // 11
     String arbeitsZeit = " ";  // 12
     String komments = "- ";//13
-    public Anfrage(int id, String datumS,  String bezeichnung, String gewerk, String anfragendeFa, String land, String deadline, double summe,
+    public Anfrage(int id, String datumS,  String bezeichnung, String gewerk, String anfragendeFa, String land, String deadline, String summe,
                    int kennZahl, String angebotsNummer, String beschreibung, String arbeitsZeit, String komments ){
         this.id = id;
         this.datumS = datumS;
@@ -81,7 +81,7 @@ public class Anfrage {
         this.komments = komments;
 
 
-    };
+    }
 
     public void setDatumS(String datumS) {
         this.datumS = datumS;
@@ -107,7 +107,7 @@ public class Anfrage {
         this.deadline = deadline;
     }
 
-    public void setSumme(double summe) {
+    public void setSumme(String summe) {
         this.summe = summe;
     }
 
@@ -137,8 +137,8 @@ public class Anfrage {
         this.kennZahl = kennZahl;
         this.land = land;
 
-    };
-    public Anfrage(){};
+    }
+    public Anfrage(){}
 
     int getId(){
         return id;
@@ -153,8 +153,8 @@ public class Anfrage {
     }
 
     public String toString(){
-        String result = "";
-        result  = "Anfrage:  - " + getId() + " _ " + getDatumS() + " _ " + getBezeichnung()+ " _ " + getGewerk() + " _ " + getAnfragendeFa() + " _ "
+
+        String  result  = "Anfrage:  - " + getId() + " _ " + getDatumS() + " _ " + getBezeichnung()+ " _ " + getGewerk() + " _ " + getAnfragendeFa() + " _ "
                 + getLand() + " _ " + getDeadline() +
                 " _ " + getSumme() +  " _ " + getKennZahl() + " _ " + getAngebotsNummer() + " _ " +getBeschreibung() + " _ " +getArbeitsZeit() + " _ "
                 + System.lineSeparator() + getKomments();

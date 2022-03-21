@@ -35,7 +35,7 @@ public class XmlReader {
 
             }
             for (Anfrage anf: anfrageList){
-                textErgebnis =  textErgebnis + anf.toString();
+                textErgebnis = new StringBuilder().append(textErgebnis).append(anf.toString()).toString();
                 System.out.println(" данные из файла  " + textErgebnis); // вывод данных из файла
             }
         } catch (ParserConfigurationException e) {
@@ -58,7 +58,7 @@ public class XmlReader {
             anfrage.setAnfragendeFa(getTagValue("firma", element));
             anfrage.setLand(getTagValue("land", element));
             anfrage.setDeadline(getTagValue("deadline", element));
-            anfrage.setSumme(Double.parseDouble(getTagValue("summe", element)));
+            anfrage.setSumme(getTagValue("summe", element));
             anfrage.setKennZahl(Integer.parseInt(getTagValue("kennzahl", element)));
             anfrage.setAngebotsNummer(getTagValue("angebotsnummer", element));
             anfrage.setBeschreibung(getTagValue("beschreibung", element));
@@ -70,7 +70,7 @@ public class XmlReader {
     }
     private static String getTagValue(String tag, Element element){
         NodeList nodelist = element.getElementsByTagName(tag).item(0).getChildNodes();
-        Node node = (Node) nodelist.item(0);
+        Node node =  nodelist.item(0);
         return node.getNodeValue() ;
     }
 

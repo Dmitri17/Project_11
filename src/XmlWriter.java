@@ -36,7 +36,8 @@ public class XmlWriter {
             transformer.setOutputProperty(OutputKeys.INDENT,"yes");
             DOMSource source = new DOMSource(doc);
 
-            StreamResult file = new StreamResult(new File("src/xmlFile11.xml"));
+           // StreamResult file = new StreamResult(new File("src/xmlFile11.xml"));
+            StreamResult file = new StreamResult((new File("Z:\\Lepeschko\\anfragenstorage\\storage1\\xmlFile11.xml")));
 transformer.transform(source,file);
             System.out.println("закончили запись в файл ");
 
@@ -80,7 +81,7 @@ Element idElement = (Element) anfrageEl.appendChild(getAnfrageElements(doc, anfr
 
 
 
-    System.out.println("данные, записываемые в файл " + anf.toString());
+  //  System.out.println("данные, записываемые в файл " + anf.toString());
 
 
 

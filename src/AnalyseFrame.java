@@ -69,7 +69,7 @@ public class AnalyseFrame  extends JFrame {
         neuDatum.setText(new Date().toString());
         neuDatum.setBorder(genTitleBorder("Datum der Anfrage"));
         neuBezeichnung = new JTextArea();
-        neuBezeichnung.setText("vvvvvvvvv");
+        neuBezeichnung.setText("# ");
         neuBezeichnung.setBorder(genTitleBorder("Bezeichnung"));
         neuGewerk = new JTextArea();
         neuGewerk.setBorder(genTitleBorder("Gewerk"));
@@ -154,7 +154,7 @@ public class AnalyseFrame  extends JFrame {
         inKalkulation.setToolTipText("Feld für die Anfragen in Kalkulation");
         inKalkulation.setLayout(new GridLayout(10, 10, 3, 3));
         //   inKalkulation.setLayout(new FlowLayout());
-ArrayList<Anfrage> anfr_kalkul = new ArrayList<>();
+        ArrayList<Anfrage> anfr_kalkul = new ArrayList<>();
         for(Anfrage af: XmlReader.anfrageList){
 
             if(af.getKennZahl() == 2){
@@ -257,10 +257,7 @@ ArrayList<Anfrage> anfr_kalkul = new ArrayList<>();
         return titledBorder; }
 
 
-    public String getNewDate(){
-        String date = this.neuDatum.getText();
-        return date;
-    }
+    //
 
 
     public class ButtonAnfrage extends JButton {
@@ -348,20 +345,73 @@ public OpenButtonEventListener(Anfrage a){
             }
             idMax ++;
             neuAnf.setId(idMax);
-            neuAnf.setDatumS(" " +new Date().toString());
-            neuAnf.setBezeichnung(" " +neuBezeichnung.getText());
-            neuAnf.setGewerk(" " +neuGewerk.getText());
-            neuAnf.setAnfragendeFa(" " +neuFirma.getText());
-            neuAnf.setLand(" " +neuLand.getText());
-            neuAnf.setDeadline(" " +neuDeadLine.getText());
-            neuAnf.setSumme(Double.parseDouble(neuSumme.getText()));
+            neuAnf.setDatumS(" " +new Date());
+            if (neuBezeichnung.getText().equals("")) {
+                neuAnf.setBezeichnung("keine Info zur Bezeichnung");
 
-                neuAnf.setKennZahl(Integer.parseInt(neuKennzahl.getText()));
+            }else {
+                neuAnf.setBezeichnung(" " +neuBezeichnung.getText());
+            }
+            if (neuGewerk.getText().equals("")) {
+
+               neuAnf.setGewerk("keine Info zum Gewerk");
+
+            }else{
+                neuAnf.setGewerk(" " + neuGewerk.getText());
+            }
+            if (neuFirma.getText().equals("")) {
+                neuAnf.setAnfragendeFa("keine Info zur Firma");
+
+            }else{
+                neuAnf.setAnfragendeFa(" " +neuFirma.getText());
+            }
+            if (neuLand.getText().equals("")) {
+
+                neuAnf.setLand("keine Info zum Land");
+
+            }else{
+                neuAnf.setLand(" " + neuLand.getText());
+            }
+            if (neuDeadLine.getText().equals("")) {
+                neuAnf.setDeadline("keine Info zu Deadline");
+
+            }else{
+                neuAnf.setDeadline(" " +neuDeadLine.getText());
+            }
+            if (neuSumme.getText().equals("")) {
+                neuAnf.setSumme("keine Info zur Summe");
+
+            }else{
+                neuAnf.setSumme(""+ neuSumme.getText());
+            }
+            int kennzahl;
+try {
+    kennzahl = Integer.parseInt(neuKennzahl.getText());
+    neuAnf.setKennZahl(kennzahl);
+}catch (NumberFormatException nfe){
+    kennzahl = 1;
+    neuAnf.setKennZahl(kennzahl);
+}
 
 
-            neuAnf.setAngebotsNummer(" " +neuAngebotsNummer.getText());
-            neuAnf.setBeschreibung(" " +neuBeschreibung.getText());
-            neuAnf.setArbeitsZeit(" "+ neuArbZeit.getText());
+             if(neuAngebotsNummer.getText().equals("")){
+                 neuAnf.setAngebotsNummer("keine Info zur Angebotsnummer");
+             }else{
+                 neuAnf.setAngebotsNummer(" " +neuAngebotsNummer.getText());
+             }
+if(neuBeschreibung.getText().equals("")){
+    neuAnf.setBeschreibung("keine Beschreibung");
+}else{
+    neuAnf.setBeschreibung(" " +neuBeschreibung.getText());
+}
+if(neuArbZeit.getText().equals("")){
+    neuAnf.setArbeitsZeit("0.00");
+}else{
+    neuAnf.setArbeitsZeit(" "+ neuArbZeit.getText());
+}
+
+
+
 
 
 XmlReader.anfrageList.add(neuAnf);
